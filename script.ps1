@@ -1,7 +1,7 @@
 # Completely written by https://github.com/AffanTheBest
 
 $tasks = @(
-    "InstallChrome" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoShell"
+    "InstallChrome" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoCompass", "InstallPython", "InstallGolang", "InstallPgAdmin3"
 )
 # -----------------------------------------------------------------------------------------------------------------
 
@@ -58,9 +58,9 @@ Function InstallChrome {
     Write-Host ""
 }
 
-Function InstallFireFox {
-    Write-Host "Installing Firefox Stable..."
-    choco install firefox -y
+Function InstallBrave {
+    Write-Host "Installing Brave..."
+    choco install brave -y
     Write-Host "Done!"
     Write-Host ""
 }
@@ -79,6 +79,34 @@ Function InstallTelegram {
     Write-Host ""
 }
 
+Function InstallGolang {
+    Write-Host "Installing Golang..."
+    choco install golang -y
+    Write-Host "Done!"
+    Write-Host ""
+}
+
+Function InstallPython {
+    Write-Host "Installing Golang..."
+    choco install python -y
+    Write-Host "Done!"
+    Write-Host ""
+}
+
+Function InstallMongoCompass {
+    Write-Host "Installing Golang..."
+    choco install mongodb-compass -y
+    Write-Host "Done!"
+    Write-Host ""
+}
+
+Function InstallPgAdmin3 {
+    Write-Host "Installing Golang..."
+    choco install pgadmin3 -y
+    Write-Host "Done!"
+    Write-Host ""
+}
+
 Function InstallVlc {
     Write-Host "Installing VLC..."
     choco install vlc -y
@@ -91,6 +119,11 @@ Invoke-Expression InstallTelegram
 Invoke-Expression InstallVlc
 Invoke-Expression Install7Zip
 Invoke-Expression InstallChrome
-Invoke-Expression InstallaFireFox
+Invoke-Expression InstallBrave
 Invoke-Expression InstallVscode
+Invoke-Expression InstallGolang
+Invoke-Expression InstallPython
+Invoke-Expression InstallMongoCompass
+Invoke-Expression InstallPgAdmin3
+
 
