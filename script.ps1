@@ -1,7 +1,7 @@
 # Completely written by https://github.com/AffanTheBest
 
 $tasks = @(
-    "InstallFFMPEG" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoCompass", "InstallPython", "InstallGolang", "InstallPgAdmin3"
+    "InstallFFMPEG" , "InstallGit" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoCompass", "InstallPython", "InstallGolang", "InstallPgAdmin3"
 )
 # -----------------------------------------------------------------------------------------------------------------
 
@@ -80,6 +80,13 @@ Function InstallTelegram {
     Write-Host ""
 }
 
+Function InstallGit {
+    Write-Host "Installing Git..."
+    choco install git -y
+    Write-Host "Done!"
+    Write-Host ""
+}
+
 Function InstallGolang {
     Write-Host "Installing Golang..."
     choco install golang -y
@@ -126,3 +133,4 @@ Invoke-Expression InstallPython
 Invoke-Expression InstallMongoCompass
 Invoke-Expression InstallPgAdmin3
 Invoke-Expression InstallFFMPEG
+Invoke-Expression InstallGit
