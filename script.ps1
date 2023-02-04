@@ -1,7 +1,7 @@
 # Completely written by https://github.com/AffanTheBest
 
 $tasks = @(
-    "InstallChrome" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoCompass", "InstallPython", "InstallGolang", "InstallPgAdmin3"
+    "InstallFFMPEG" , "InstallBrave" , "InstallVsCode" , "InstallTelegram" , "InstallVlc" , "Install7Zip" , "InstallMongoCompass", "InstallPython", "InstallGolang", "InstallPgAdmin3"
 )
 # -----------------------------------------------------------------------------------------------------------------
 
@@ -51,9 +51,10 @@ Function Install7Zip {
     Write-Host ""
 }
 
-Function InstallChrome {
-    Write-Host "Installing Chrome Stable..."
-    choco install googlechrome -y
+Function InstallFFMPEG {
+    Write-Host ""
+    Write-Host "Installing ffmpeg... "
+    choco install ffmpeg -y
     Write-Host "Done!"
     Write-Host ""
 }
@@ -74,7 +75,7 @@ Function InstallVscode {
 
 Function InstallTelegram {
     Write-Host "Installing Telegram Desktop..."
-    choco install telegram -y
+    choco install 64gram -y
     Write-Host "Done!"
     Write-Host ""
 }
@@ -87,21 +88,21 @@ Function InstallGolang {
 }
 
 Function InstallPython {
-    Write-Host "Installing Golang..."
+    Write-Host "Installing Python..."
     choco install python -y
     Write-Host "Done!"
     Write-Host ""
 }
 
 Function InstallMongoCompass {
-    Write-Host "Installing Golang..."
+    Write-Host "Installing MongoCompass..."
     choco install mongodb-compass -y
     Write-Host "Done!"
     Write-Host ""
 }
 
 Function InstallPgAdmin3 {
-    Write-Host "Installing Golang..."
+    Write-Host "Installing PgAdmin3..."
     choco install pgadmin3 -y
     Write-Host "Done!"
     Write-Host ""
@@ -118,12 +119,10 @@ Invoke-Expression InstallChocolatey
 Invoke-Expression InstallTelegram
 Invoke-Expression InstallVlc
 Invoke-Expression Install7Zip
-Invoke-Expression InstallChrome
 Invoke-Expression InstallBrave
 Invoke-Expression InstallVscode
 Invoke-Expression InstallGolang
 Invoke-Expression InstallPython
 Invoke-Expression InstallMongoCompass
 Invoke-Expression InstallPgAdmin3
-
-
+Invoke-Expression InstallFFMPEG
